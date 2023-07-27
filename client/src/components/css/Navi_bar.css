@@ -1,0 +1,26 @@
+
+.Navi_container{
+    background-color: rgb(255, 255, 255);
+    height: 8vh;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.Navi_toggle{
+    background-color : white;
+    border-color : rgb(0, 0, 0);
+    
+    
+}
+
+.Navibar_Logo{
+    color : rgb(0, 0, 0);
+}
+
+.Navibar_Logo:hover{
+    color : rgb(0, 0, 0);
+}
+
+.Navibar_Logo:visited {
+    color : rgb(0, 0, 0);
+}
