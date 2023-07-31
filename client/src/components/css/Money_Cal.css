@@ -24,3 +24,12 @@
     height: 2vh;
     border-radius: 10px;
 }
+
+@media (max-width : 900px){
+    .Money_Cal{
+        width : 300px;
+    }
+    .Money_Cal_input{
+        width : 200px;
+    }
+}

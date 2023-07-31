@@ -21,10 +21,17 @@
 
 .sidebar_page{
     width : 350px;
-    font-size : 1.5em;
-    padding : 20px;
+    font-size : 1.2em;
+    padding : 15px;
     overflow: hidden;
     color : rgba(255, 255, 255, 0.781);
+}
+
+.sidebar_icon{
+    font-size: 25px;
+    padding-right: 20px;
+    padding-top: 5px;
+    vertical-align: bottom
 }
 
 .sidebar_page_sub{
@@ -46,7 +53,7 @@
 @media (max-width : 900px) {
     
     .sidebar_all{
-        width : 70px;
+        width : 55px;
         transition: all 0.2s ease-in-out;
     }
     .sidebar_all:hover{

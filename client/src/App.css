@@ -9,6 +9,13 @@
 .App_Main{
   display: flex;
   width : 60%;
-  background-color: aliceblue;
   flex-direction: row;
+}
+
+
+
+@media (max-width : 900px){
+  .App_Main{
+      width : 100%;
+  }
 }

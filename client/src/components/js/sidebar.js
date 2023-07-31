@@ -47,7 +47,12 @@ const Sidebar =()=> {
         <>
             <div className='sidebar_all'>
                 <div className='sidebar_Logo' ><a className="sidebar_href" href="/">LOAIN</a></div>
-                <div className='sidebar_page'><a className="sidebar_href" href="/">icon 홈</a></div>
+                <div className='sidebar_page'>
+                    <a className="sidebar_href" href="/">
+                        <span className="material-symbols-outlined sidebar_icon">house</span>
+                        홈
+                    </a>
+                </div>
                 <div className='sidebar_page' onClick={() => {
                     setRaidDropDown(!raidDropDown)
                     if(raidDropDown === false){
@@ -55,10 +60,13 @@ const Sidebar =()=> {
                         setAbyss(false);
                     }
                     }} >
-                    icon   레이드 {raidDropDown ? '▲' : '▼'}                   
+                        <span className="material-symbols-outlined sidebar_icon">swords</span>
+                      레이드 {raidDropDown ? '▲' : '▼'}                   
                 </div>
                 {raidDropDown && <Raid />}
-                <div className='sidebar_page'>icon   PAGE 3</div>
+                <div className='sidebar_page'>
+                <span class="material-symbols-outlined sidebar_icon">person</span>
+                마이페이지</div>
                 <div className='sidebar_page'>icon   PAGE 4</div>
                 <div className='sidebar_page'>icon   PAGE 5</div>
             </div>
