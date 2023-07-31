@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
 import axios from "axios";
 import {useEffect} from "react";
-import NaviBar from './components/js/Navi_bar';
 import Sidebar from './components/js/sidebar';
 import Money_Calculator from './components/js/Money_Cal';
-
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Raidpage from './components/js/raidpage';
 
 function App() {
   const callApi = async () => {
@@ -25,7 +25,15 @@ function App() {
     <div className="App">
         <div className="App_Main">
             <Sidebar />
-            <Money_Calculator />
+
+            <Router >
+                <Routes>
+                    
+                    <Route exact path="/" element={<Money_Calculator />} />
+                    <Route exact path="/raid" element={<Raidpage />} />
+                
+                </Routes>
+            </Router>
         </div>
     </div>
   );

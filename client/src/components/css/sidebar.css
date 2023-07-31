@@ -1,37 +1,56 @@
 .sidebar_all{
     background-color: black;
-    width : 300px;
+    width : 200px;
     height: 100vh;
     border-left : 1px solid white;
     border-right : 1px solid white;
 
 }
-
+.sidebar_href{
+    text-decoration: none;
+}
+.sidebar_href:hover, :visited{
+    color: white;
+}
 .sidebar_Logo{
     color : white;
-    font-size: 5em;
+    font-size: 3em;
     font-weight :800;
     padding : 20px;
 }
 
 .sidebar_page{
     width : 350px;
-    font-size : 2em;
+    font-size : 1.5em;
     padding : 20px;
     overflow: hidden;
-    color : white;
+    color : rgba(255, 255, 255, 0.781);
 }
 
+.sidebar_page_sub{
+    width : 100px;
+    font-size: 1em;
+    color : white;
+    padding-left: 30px;
+    overflow: hidden;
+}
+
+.sidebar_ul{
+    width : 100px;
+    font-size: 1em;
+    padding-left : 50px;
+    overflow: hidden;
+}
 
 
 @media (max-width : 900px) {
     
     .sidebar_all{
-        width : 95px;
-        transition: all 0.3s ease-in-out;
+        width : 70px;
+        transition: all 0.2s ease-in-out;
     }
     .sidebar_all:hover{
-        width : 300px;
+        width : 200px;
      
     }
     .sidebar_all:hover > .sidebar_Logo{visibility: visible;}
@@ -41,6 +60,6 @@
 }
 @media (min-width : 900px){
     .sidebar_all{
-        transition: all 0.3s ease-out;
+        transition: all 0.2s ease-out;
     }
 }
