@@ -28,7 +28,9 @@ const Money_Calculator =()=>{
         fetch(url,options)
         .then((response) => response.json())
         .then((data) => {
-            console.log(data.Items[0].RecentPrice)
+            for(var i = 0; i<data.Items.length; i++) {
+                console.log(data.Items[i].Name + " = " + data.Items[i].RecentPrice)
+            }
         })
     }
 
