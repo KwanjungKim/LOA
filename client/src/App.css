@@ -3,19 +3,27 @@
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.884);
+  background-color: rgba(0, 0, 0, 0.952);
 }
 
 .App_Main{
   display: flex;
-  width : 60%;
+  width : 75%;
   flex-direction: row;
 }
 
 
 
-@media (max-width : 900px){
+@media (max-width : 1000px){
   .App_Main{
       width : 100%;
+      transition: all 0.2s ease-out;
+  }
+}
+
+
+@media (min-width : 1000px){
+  .App_Main{
+      transition: all 0.3s ease-out;
   }
 }

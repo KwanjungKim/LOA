@@ -13,8 +13,9 @@ const Money_Calculator =()=>{
                  
                         
                         <div>
-                        <h1>경매 계산기</h1>
-                        <input className='Money_Cal_input' placeholder='입력'/> 
+                        <h3 className='Money_Cal_name'>경매 계산기</h3>
+                        <input className='Money_Cal_input' placeholder='입력'/>
+                        <button>검색</button>
                         </div>
 
                     </div>
