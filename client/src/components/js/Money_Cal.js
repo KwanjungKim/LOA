@@ -6,6 +6,7 @@ const Money_Calculator =()=>{
     const [inputText, setInputText] = useState("");
 
     const handleFormSubmit =(e)=>{
+        e.preventDefault()
         const formData = new FormData();
         formData.append('inputText', inputText);
 

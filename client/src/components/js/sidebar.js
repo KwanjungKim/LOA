@@ -65,7 +65,7 @@ const Sidebar =()=> {
                 </div>
                 {raidDropDown && <Raid />}
                 <div className='sidebar_page'>
-                <span class="material-symbols-outlined sidebar_icon">person</span>
+                <span className="material-symbols-outlined sidebar_icon">person</span>
                     마이페이지
                 </div>
                 <div className='sidebar_page'>icon   PAGE 4</div>
