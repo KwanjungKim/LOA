@@ -3,6 +3,8 @@ import '../css/Money_Cal.css';
 
 const Money_Calculator =()=>{
     const [inputText, setInputText] = useState("");
+    const [minPrice, setMinPrice] = useState("");
+ 
 
     const ChangeText =()=>{
         if(inputText==="만월" || inputText==="만집" ||inputText==="만월의집행자"){setInputText("만월의 집행자");}
@@ -102,6 +104,7 @@ const Money_Calculator =()=>{
         .then((data) => {
             for(var i = 0; i<data.Items.length; i++) {
                 console.log(data.Items[i].Name + " = " + data.Items[i].CurrentMinPrice)
+                setMinPrice(data.Items[i].CurrentMinPrice);
             }
         })
     }
@@ -119,8 +122,21 @@ const Money_Calculator =()=>{
                                     placeholder='입력' 
                                     onChange={event => {setInputText(event.target.value);}}
                                 />
-                                <input className='Money_Cal_input' type="submit" value="검색" />
+                                <input className='Money_Cal_btn' type="submit" value="검색" />
                             </form>
+                            <br/>
+                            <a> 현재 최저가 : {minPrice} 골드</a> <br/><br/>
+                            <a>4 Players</a> <br/>
+
+                            <a> 나만 최대 이득 {(minPrice*0.66).toFixed(0)}</a><br/>
+                            <a> N빵 입찰가 {(minPrice*0.7125).toFixed(0)}</a>
+                            <a></a>
+
+                            <br/><br/>
+                            <a>8 Players</a> <br/>
+
+                            <a> 나만 이득 {(minPrice*0.77).toFixed(0)}</a><br/>
+                            <a> N빵 입찰가 {(minPrice*0.83125).toFixed(0)}</a>
                         </div>
 
                     </div>
