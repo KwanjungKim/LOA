@@ -4,17 +4,19 @@ import '../css/Money_Cal.css';
 const Money_Calculator =()=>{
     const [inputText, setInputText] = useState("");
     const [minPrice, setMinPrice] = useState("");
+    const [legName, setLegName] = useState("");
  
 
     const ChangeText =()=>{
+        // 직업각인---------------------------------------------------------------------------------------------
         if(inputText==="만월" || inputText==="만집" ||inputText==="만월의집행자"){setInputText("만월의 집행자");}
         if(inputText==="그믐" || inputText==="그경" ||inputText==="그믐의경계"){setInputText("그믐의 경계");}
+        if(inputText==="축오" || inputText==="축복의오라"){ setInputText("축복의 오라");}
         if(inputText==="예둔" || inputText==="예리한둔기"){setInputText("예리한 둔기");}
         if(inputText==="돌대" || inputText==="돌격 대장"){setInputText("돌격대장");}
         if(inputText==="타대" || inputText==="타격의대가"){ setInputText("타격의 대가");}
         if(inputText==="저받" || inputText==="저주받은인형"){ setInputText("저주받은 인형");}
         if(inputText==="절구" || inputText==="절실한구원"){ setInputText("절실한 구원");}
-        if(inputText==="축오" || inputText==="축복의오라"){ setInputText("축복의 오라");}
         if(inputText==="기습의대가"){setInputText("기습의 대가");}
         if(inputText==="질증" || inputText==="질량증가"){setInputText("질량 증가");}
         if(inputText==="멈출수없는충동" ){setInputText("멈출 수 없는 충동");}
@@ -105,6 +107,7 @@ const Money_Calculator =()=>{
             for(var i = 0; i<data.Items.length; i++) {
                 console.log(data.Items[i].Name + " = " + data.Items[i].CurrentMinPrice)
                 setMinPrice(data.Items[i].CurrentMinPrice);
+                setLegName(data.Items[i].Name);
             }
         })
     }
@@ -113,30 +116,29 @@ const Money_Calculator =()=>{
         <>
             <div className='Money_Cal_div'>
                     <div className='Money_Cal'>
-                        <div>
+                        <div className='Money_Cal_Formdiv'>
                             <h3 className='Money_Cal_name'>경매 계산기</h3>
                             <form className="Money_Cal_submit" onSubmit={handleFormSubmit} >
                                 <input 
-                                    className='Money_Cal_input' 
                                     type="text" 
-                                    placeholder='입력' 
+                                    placeholder='전설 각인서 입력' 
                                     onChange={event => {setInputText(event.target.value);}}
                                 />
-                                <input className='Money_Cal_btn' type="submit" value="검색" />
+                                <button type="submit" >검색</button>
                             </form>
                             <br/>
-                            <a> 현재 최저가 : {minPrice} 골드</a> <br/><br/>
-                            <a>4 Players</a> <br/>
+                            <a> {legName} 현재 최저가 <b>{minPrice}G</b></a><br/><br/><br/>
+                            
+                            <a>4인 경매</a> <hr/>
+                            <a> 최대 이득 입찰가 <b>{(minPrice*0.66).toFixed(0)}G</b> </a><br/>
+                            <a> N빵 입찰가 <b>{(minPrice*0.7125).toFixed(0)}G</b> </a>
+                            
 
-                            <a> 나만 최대 이득 {(minPrice*0.66).toFixed(0)}</a><br/>
-                            <a> N빵 입찰가 {(minPrice*0.7125).toFixed(0)}</a>
-                            <a></a>
+                            <br/><br/><br/>
+                            <a>8인 경매</a> <hr/>
 
-                            <br/><br/>
-                            <a>8 Players</a> <br/>
-
-                            <a> 나만 이득 {(minPrice*0.77).toFixed(0)}</a><br/>
-                            <a> N빵 입찰가 {(minPrice*0.83125).toFixed(0)}</a>
+                            <a> 최대 이득 입찰가 <b>{(minPrice*0.77).toFixed(0)}G</b></a><br/>
+                            <a> N빵 입찰가 <b>{(minPrice*0.83125).toFixed(0)}G</b></a>
                         </div>
 
                     </div>

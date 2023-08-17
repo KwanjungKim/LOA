@@ -8,9 +8,10 @@
 
 }
 .sidebar_href{
+    color : white;
     text-decoration: none;
 }
-.sidebar_href:hover, :visited{
+.sidebar_href:hover, .sidebar_href:visited{
     color: white;
 }
 .sidebar_Logo{

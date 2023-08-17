@@ -23,18 +23,58 @@
     border-bottom: 1px solid white;
 }
 
-.Money_Cal_input{
-    width : 300px;
-    height: 2vh;
-    border-radius: 20px;
-    
+
+/* --------------------------------------------------- */
+.Money_Cal_submit{
+    width : 355px;
 }
+.Money_Cal_submit button{
+    margin-left: 2px;
+    height: 3.6vh;
+}
+.Money_Cal_submit input{
+    width : 300px;
+    height: 3vh;
+}
+.Money_Cal_submit input,.Money_Cal_submit button{
+    border-radius: 5px;
+    border: 2px solid rgba(211, 211, 211, 0.589);
+    color : white;
+    background-color: rgb(0, 0, 0);
+}
+.Money_Cal_submit input:hover,.Money_Cal_submit button:hover{
+    border-color : white;
+    transition: all 0.5s ease-out;
+}
+.Money_Cal_submit input:focus{
+    border: 2px solid rgb(153, 255, 0);
+    transition: all 0.5s ease-out;
+    outline: none;
+}
+.Money_Cal_submit input::placeholder,.Money_Cal_submit button::placeholder {
+    color: lightgray;
+    font-style :normal;
+  }
+/* --------------------------------------------------- */
+
+.Money_Cal_Formdiv b{
+    color : rgb(153, 255, 0);
+    display: inline-block;
+    float: right;
+  }
 
 @media (max-width : 900px){
+    .Money_Cal_submit{
+        width : 355px;
+        white-space: inherit;
+    }
     .Money_Cal{
+        width : 400px;
+    }
+    .Money_Cal_submit input{
         width : 300px;
     }
-    .Money_Cal_input{
-        width : 200px;
+    .Money_Cal_Formdiv{
+        width : 350px;
     }
 }
