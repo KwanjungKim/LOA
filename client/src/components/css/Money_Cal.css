@@ -87,9 +87,12 @@
 }
 
 
-
+.DropDown li{
+    margin-bottom: 5px;
+}
 .DropDown li:hover{
     background-color: rgb(153, 255, 0);
     color : black;
     font-weight: 900;
 }
+

@@ -50,9 +50,10 @@ export const DropDownContainer = styled.ul`
   border: 1px solid rgb(223, 225, 229);
   box-shadow: ${boxShadow};
   z-index: 3;
+  position : absolute;
 
   > li {
-    padding: 0 1rem;
+    padding: 0 0.5rem;
 
     &.selected {
       background-color: lightgray;
