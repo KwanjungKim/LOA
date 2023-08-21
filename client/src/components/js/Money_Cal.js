@@ -8,10 +8,12 @@ const Money_Calculator =()=>{
     const [minPrice, setMinPrice] = useState("");
     const [legName, setLegName] = useState("");
  
+    // -----Autocomplete.js에서 값 가져오는 함수----
     const getInput = (x) =>{
-        setInputText(x);
-    }
+        setInputText(x); }
+    // --------------------------------------------
 
+    // -----텍스트 대치-----------------------------
     const ChangeText =()=>{
         if(inputText===""){setInputText("원한");}
         // 직업각인---------------------------------------------------------------------------------------------
@@ -84,10 +86,11 @@ const Money_Calculator =()=>{
 
     }
     ChangeText();
+    // --------------------------------------------
+
+    
     const handleFormSubmit = async(e)=>{
         e.preventDefault()
-    
-    
         const url = 'https://developer-lostark.game.onstove.com/markets/items'
         const options = {
             method: 'post',
@@ -136,21 +139,20 @@ const Money_Calculator =()=>{
                                <Autocomplete getInput={getInput}/>
                                 <button type="submit" >검색</button>
                   
-                            </form>
-                            <br/>
+                            </form><br/>
+
                             <div className='Money_Cal_list'>
-                            <div><a> {legName} 현재 최저가 <b>{minPrice}G</b></a></div><br/>
+                                <div><a> {legName} 현재 최저가 <b>{minPrice}G</b></a></div><br/>
+                                
+                                <a>4인 경매</a> <hr/>
+                                <div><a> 최대 이득 입찰가 <b>{(minPrice*0.66).toFixed(0)}G</b> </a><br/>
+                                <a> N빵 입찰가 <b>{(minPrice*0.7125).toFixed(0)}G</b> </a></div>
                             
-                            <a>4인 경매</a> <hr/>
-                            <div><a> 최대 이득 입찰가 <b>{(minPrice*0.66).toFixed(0)}G</b> </a><br/>
-                            <a> N빵 입찰가 <b>{(minPrice*0.7125).toFixed(0)}G</b> </a></div>
-                            
+                                <br/><br/>
 
-                            <br/><br/>
-                            <a>8인 경매</a> <hr/>
-
-                            <div><a> 최대 이득 입찰가 <b>{(minPrice*0.77).toFixed(0)}G</b></a><br/>
-                            <a> N빵 입찰가 <b>{(minPrice*0.83125).toFixed(0)}G</b></a></div>
+                                <a>8인 경매</a> <hr/>
+                                <div><a> 최대 이득 입찰가 <b>{(minPrice*0.77).toFixed(0)}G</b></a><br/>
+                                <a> N빵 입찰가 <b>{(minPrice*0.83125).toFixed(0)}G</b></a></div>
                             </div>
                         </div>
 

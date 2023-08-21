@@ -13,7 +13,6 @@ export const InputContainer = styled.div`
   z-index: 3;
   box-shadow: 0;
   
-
   &:focus-within {
     box-shadow: ${boxShadow};
   }
@@ -61,6 +60,7 @@ export const DropDownContainer = styled.ul`
   }
 `;
 
+// -- 자동완성 List---------------
 const deselectedOptions = [
     '오의 강화',
     '오의난무',
@@ -69,14 +69,12 @@ const deselectedOptions = [
     '강화 무기',
 
   ];
+// ------------------------------
 
   export const Autocomplete = ({getInput}) => {
-    const [hasText, setHasText] = useState(false);
-    // input에 입력값이 존재하는지 확인하는 용도
-    const [inputValue, setInputValue] = useState('');
-    // 입력 받은 input값을 저장하는 용도
-    const [options, setOptions] = useState(deselectedOptions);
-    // 자동완성으로 보여줄 값들을 저장하는 용도
+    const [hasText, setHasText] = useState(false); // input값 유무 확인
+    const [inputValue, setInputValue] = useState('');// 입력 받은 input값을 저장
+    const [options, setOptions] = useState(deselectedOptions); // 자동완성 값들을 저장
 
     
     useEffect(() => {
@@ -106,7 +104,7 @@ const deselectedOptions = [
       getInput(clickedOption);
       setHasText(false);
     
-      document.getElementById("input").focus();
+      document.getElementById("input").focus(); // 자동완성 클릭 후 input박스 포커스
     };
     // 보여지는 자동완성 값 중 하나를 클릭하면 해당 값이 input에 할당
   
