@@ -57,11 +57,18 @@
   }
 /* --------------------------------------------------- */
 
-.Money_Cal_Formdiv b{
+.Money_Cal_list div{
+    padding: 5px 5px 5px 5px;
+    border: 2px dashed rgb(153, 255, 0);
+}
+.Money_Cal_list b{
     color : rgb(153, 255, 0);
     display: inline-block;
     float: right;
+    border-left: 2px dashed rgb(153, 255, 0);
+    padding-left: 5px; 
   }
+
 
 @media (max-width : 900px){
     .Money_Cal_submit{
@@ -77,4 +84,12 @@
     .Money_Cal_Formdiv{
         width : 350px;
     }
+}
+
+
+
+.DropDown li:hover{
+    background-color: rgb(153, 255, 0);
+    color : black;
+    font-weight: 900;
 }
