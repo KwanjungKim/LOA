@@ -96,7 +96,7 @@ const Money_Calculator =()=>{
             method: 'post',
             headers: {
                 "Content-Type" : 'application/json',    
-                authorization : 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IktYMk40TkRDSTJ5NTA5NWpjTWk5TllqY2lyZyIsImtpZCI6IktYMk40TkRDSTJ5NTA5NWpjTWk5TllqY2lyZyJ9.eyJpc3MiOiJodHRwczovL2x1ZHkuZ2FtZS5vbnN0b3ZlLmNvbSIsImF1ZCI6Imh0dHBzOi8vbHVkeS5nYW1lLm9uc3RvdmUuY29tL3Jlc291cmNlcyIsImNsaWVudF9pZCI6IjEwMDAwMDAwMDAyOTQ0ODQifQ.Yei6-OelSW1b-H2keZak8YGsnaSPzlM7rQJd7mm9PBYzREYXTZBzScj54-iJniELyBVr4xSCf5gEwhWnqlIPf1xfocmFrou9gOECaRi7cGh9-YLadt5zrweynztKD-B-L64L8GFy5g-AJiiyBw0ViaYCSL57RQ_SvXNUjEL1B_EwoGypXz_tOB03bEQxhal_zEuQTFE2odmtskEd21i2Ytt0q8bdohihhIkIJe9pMesvKAhd49Kj3jj1d5e4KRFQM6ynMrTmoj1AtEtFAWdSI17Wfm1ZVZ04UsBuZgO17rypyu1MvrCpz1cmN0SMFkRGWose8I6wO_NSRl5RTnARSw'
+                authorization : process.env.REACT_APP_API_KEY
             },
             body: JSON.stringify({
                 "Sort": "GRADE",
